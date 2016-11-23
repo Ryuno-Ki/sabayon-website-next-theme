@@ -1,9 +1,120 @@
-body {
-    background: #000;
-    color: #fff;
-    font-family: 'Quattrocento Sans', sans-serif;
+* {
+    color. inherit;
+    float: none;
+    font-family: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
 }
 
+* + *,
+nav ul li:first-child {
+    margin-top: 1.125rem;
+}
+
+body, br, li, dt, dd, th, td, option {
+      margin-top: 0;
+}
+
+a {
+    color: #2366d1;
+}
+
+body {
+    background: #000;
+    color: #f8f8f8;
+    font-family: 'Quattrocento Sans', sans;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 125%;
+    text-align: center;
+}
+
+h2 span,
+h3 span {
+    display: block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 3em;
+    text-rendering: auto;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+nav {
+    height: auto;
+    min-height: 35px;
+    position: relative;
+}
+
+nav > a {
+    background-clip: content-box;
+    background-image: url("/img/navbar_sabayon_logo_trans.png");
+    background-repeat: no-repeat;
+    background-size: 153px 35px;
+    color: transparent;
+    display: inline-block;
+    height: 35px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 153px;
+}
+
+section {
+    min-height: 85vh;
+}
+
+section:nth-child(2n) {
+    background: #f8f8f8;
+    color: #000;
+}
+
+section:first-of-type {
+    background: url("/img/intro-bg.jpg");
+    background-attachment: fixed;
+}
+
+section ul,
+section ul li + li {
+    margin: 0;
+}
+
+nav ul,
+section ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    list-style: none;
+}
+
+nav ul li:first-child {
+    margin-left: 153px;
+}
+
+nav ul li,
+section ul li {
+    flex: 1 0 auto;
+    text-align: center;
+}
+
+section ul li p {
+    text-align: left;
+}
+
+nav ul li a {
+    display: block;
+    height: 100%;
+}
+
+.fa-bug {
+    color: #ffaa15;
+}
+/*
 footer {
     margin: 50px 0;
 }
@@ -355,3 +466,4 @@ img[src="https://joostruis.files.wordpress.com/2015/09/plasma_sab.png?w=582&h=21
 .headroom--unpinned {
     transform: translateY(-100%);
 }
+*/
