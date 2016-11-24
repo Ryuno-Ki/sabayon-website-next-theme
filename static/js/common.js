@@ -10,7 +10,7 @@ $(document).ready(function() {
     });
 
     // Show/hide navbar depending on scroll behaviour
-    $navBarAtTop = $('#top-nav');
+    $navBarAtTop = $('header nav');
     if ($navBarAtTop.length > 0 && 'Headroom' in window) {
         headroom = new Headroom($navBarAtTop[0]);
         headroom.init();
