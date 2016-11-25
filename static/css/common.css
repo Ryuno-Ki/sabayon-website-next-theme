@@ -197,7 +197,10 @@ section li:nth-last-child(6):first-child ~ li {
 }
 
 section li:nth-last-child(4):first-child,
-section li:nth-last-child(4):first-child ~ li,
+section li:nth-last-child(4):first-child ~ li {
+    flex-basis: 50%;
+}
+
 section li:nth-last-child(8):first-child,
 section li:nth-last-child(8):first-child ~ li {
     flex-basis: 100%;
