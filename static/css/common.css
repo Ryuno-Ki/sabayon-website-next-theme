@@ -90,9 +90,17 @@ section:first-child h1 {
     display: inline-block;
 }
 
-h1[id^=sabayon-linux] + p a {
+h1[id^=sabayon-linux] ~ p a[href$="/download"] {
     background-color: #d62c1a;
     color: #f8f8f8;
+}
+
+h1[id^=sabayon-linux] ~ p a {
+    box-sizing: border-box;
+    display: inline-block;
+    min-height: 45px;
+    padding-top: 10px;
+    vertical-align: bottom;
 }
 
 main h1 ~ p {
