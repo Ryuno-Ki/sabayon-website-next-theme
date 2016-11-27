@@ -1,10 +1,16 @@
 * {
+    box-sizing: inherit;
     color. inherit;
     float: none;
     font-family: inherit;
     line-height: inherit;
     margin: 0;
     padding: 0;
+}
+
+*::before,
+*::after {
+    box-sizing: inherit;
 }
 
 * + * {
@@ -20,9 +26,12 @@ a {
     text-decoration: none;
 }
 
+article,
 aside > * {
+    box-sizing: border-box;
     margin-left: 0;
     margin-right: 0;
+    max-width: 100%;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
@@ -82,8 +91,8 @@ img {
 
 main {
     display: flex;
+    flex-flow: row wrap;
     margin-top: 35px;
-    max-width: 100%;
 }
 
 main h1,
@@ -96,11 +105,11 @@ main h3 {
 }
 
 main article {
-    flex: 2 0 auto;
+    flex: 2 1 0;
 }
 
 main aside {
-    flex: 1 1 auto;
+    flex: 1 1 0;
 }
 
 main article,
@@ -135,12 +144,30 @@ nav {
     position: relative;
 }
 
+nav.plus.open ul {
+    height: auto;
+}
+
+nav.open ul li {
+    display: block;
+}
+
 nav ul {
     min-height: 35px;
+    max-height: 100%;
+    margin-right: 53px;
     vertical-align: bottom;
 }
 
-a {
+nav.plus ul {
+    height: 35px;
+    margin-top: 0;
+    min-height: 0;
+    overflow: hidden;
+}
+
+a,
+.more-links {
     background-color: transparent;
     color: #28f;
 }
@@ -168,12 +195,15 @@ p {
 
 section {
     min-height: 87vh;
+    min-width: 100%;
+    max-width: 100%;
 }
 
 footer section {
     min-height: 0;
 }
 
+article,
 aside > *,
 section:nth-child(2n) {
     background: #f8f8f8;
@@ -276,17 +306,6 @@ ul ul li + li {
     transition: transform 200ms linear;
 }
 
-.headroom ul {
-    position: static;
-    transform: translateX(0%);
-}
-
-.headroom--top ul {
-    position: absolute;
-    top: 0;
-    transform: translateX(110%);
-}
-
 .headroom--pinned {
     background: #131428;
     border-radius: 0;
@@ -299,6 +318,14 @@ ul ul li + li {
 
 .headroom--unpinned {
     transform: translateY(-100%);
+}
+
+.more-links {
+    cursor: pointer;
+    margin-top: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 a[href='http://dl.sabayon.org/iso/daily/daily.html']::before,
