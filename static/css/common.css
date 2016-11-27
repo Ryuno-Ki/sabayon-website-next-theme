@@ -440,13 +440,6 @@ a[href='http://dl.sabayon.org/iso/daily/daily.html']::before {
     content: "\f0c3";
 }
 
-img[src$="press-header-roll_0.png"],
-img[src="https://joostruis.files.wordpress.com/2015/09/plasma_sab.png?w=582&h=217"] {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 a[href='https://hub.docker.com/u/sabayon/dashboard/']::before {
     background-image: url("/img/docker-logo.png");
 }
@@ -549,4 +542,31 @@ li li a[href$='.box.md5']::before {
 
 li li a[href$='.iso.pkglist']::before {
     content: "\f03a";
+}
+
+img[src$='fluxbox-logo.png'],
+img[src$='gnome-logo.png'],
+img[src$='kde-logo.png'],
+img[src$='mate-logo.png'],
+img[src$='sabayon-server.png'],
+img[src$='xfce-logo.png'] {
+    max-width: 110px;
+}
+
+ol ul ul {
+    list-style-type: circle;
+}
+
+ol ul ul li {
+    list-style-image: url("/img/bullet.png");
+    margin: 0.1em 0 0.1em 1em;
+}
+
+ol ul h4 {
+    margin-bottom: 0;
+}
+
+img[src*='/flags/'] {
+    height: 128px;
+    width: 128px;
 }

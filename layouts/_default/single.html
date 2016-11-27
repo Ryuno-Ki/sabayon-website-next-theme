@@ -34,12 +34,30 @@
 
         <main>
             <article>
-                <h3>
-                    {{ .Title }}<br />
-                    <small>{{ .Description }}</small>
-                </h3>
-                <hr />
-                {{ .Content }}
+                {{ if eq .Type "latest" }}
+                    {{ range first 1 (where .Site.Pages "Section" "release") }}
+                        {{ .Render "summary" }}
+                    {{ end }}
+                {{ else }}
+                    {{ if eq .Type "releases" }}
+                        {{ range first 5 (where .Site.Pages "Section" "release") }}
+                            {{ .Render "summary" }}
+                        {{ end }}
+                    {{ else }}
+                        {{ if eq .Type "blog" }}
+                            {{ range first 5 (where .Site.Pages "Section" "article") }}
+                                {{ .Render "summary" }}
+                            {{ end }}
+                        {{ else }}
+                            <h3>
+                                {{ .Title }}<br />
+                                <small>{{ .Description }}</small>
+                            </h3>
+                            <hr />
+                            {{ .Content }}
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
             </article>
 
             <aside>
