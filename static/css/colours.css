@@ -1,0 +1,80 @@
+body,
+article li li a,
+article li li a:after,
+article li li a:focus,
+article li li a:hover {
+    background: #131428;
+    color: #f8f8f8;
+}
+
+a[href$='/donate'],
+a[href$='/donate']:active,
+a[href$='/donate']:focus,
+a[href$='/donate']:hover,
+a[href$='/donate']::before,
+h1[id^=community-collaboration],
+h1[id^=community-collaboration] ~ *,
+h1[id^=you-are-free],
+h1[id^=you-are-free] ~ *,
+h1[id^=sabayon-linux] ~ p a[href$="/download"] {
+    color: #f8f8f8;
+}
+
+a[href$='/donate']:active,
+a[href$='/donate']:focus,
+a[href$='/donate']:hover,
+h1[id^=sabayon-linux] ~ p a[href$="/download"] {
+    background-color: #d62c1a;
+}
+
+a[href$='/donate'] {
+    background: #e74c3c;
+    border: 2px solid #e74c3c;
+}
+
+a[href$='/donate']::before,
+a[href$='/donate']::after,
+a[href$='/cloud']::before,
+a[href$='/desktop']::before,
+a[href$='/server']::before,
+a[href='http://dl.sabayon.org/iso/daily/daily.html']::before {
+    background: inherit;
+    border-color: inherit;
+}
+
+a,
+.more-links {
+    background-color: transparent;
+    color: #28f;
+}
+
+h4 a::before {
+    background-color: #f8f8f8;
+}
+
+nav > a {
+    background-clip: content-box;
+    background-image: url("/img/navbar_sabayon_logo_trans.png");
+    background-repeat: no-repeat;
+    background-size: 153px 35px;
+    color: transparent;
+}
+
+article,
+aside > *,
+section:nth-child(2n) {
+    background: #f8f8f8;
+    color: #131428;
+}
+
+section:first-of-type {
+    background-attachment: fixed;
+}
+
+.fa-bug {
+    color: #ffaa15;
+}
+
+.headroom--pinned {
+    background: #131428;
+}

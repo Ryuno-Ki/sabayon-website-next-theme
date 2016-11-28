@@ -1,0 +1,155 @@
+body {
+    font-family: 'Quattrocento Sans', sans;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer hr ~ p {
+    font-size: 0.818rem;
+}
+
+h1 {
+    font-size: 2.618rem;  /* Golden ratio * Golden ratio */
+}
+
+h2 {
+    font-size: 1.618rem;  /* Golden ratio */
+}
+
+h3 {
+    font-size: 1.318rem;
+}
+
+h2 span,
+h3 span {
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 3em;
+    text-rendering: auto;
+}
+
+a[href$='/cloud']::before,
+a[href$='/desktop']::before,
+a[href$='/donate']::before,
+a[href$='/donate']::after,
+a[href$='/server']::before,
+a[href$='.iso']::before,
+a[href$='.img.xz']::before,
+a[href='http://dl.sabayon.org/iso/daily/daily.html']::before,
+a[href='https://hub.docker.com/r/sabayon']::before,
+a[href='https://atlas.hashicorp.com/Sabayon/boxes/spinbase-amd64']::before,
+a[href='https://www.facebook.com/groups/36125411841']::before,
+a[href='https://plus.google.com/+sabayon']::before,
+article li li a::before {
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+a[href$='/cloud']::before {
+    content: "\f0c2";
+}
+
+a[href$='/desktop']::before {
+    content: "\f108";
+}
+
+a[href$='/donate']:active,
+a[href$='/donate']:focus,
+a[href$='/donate']:hover {
+    text-decoration: none;
+}
+
+a[href$='/donate']::before {
+    content: "\f004";
+}
+
+a[href$='/server']::before {
+    content: "\f233";
+}
+
+a[href$='.iso']::before,
+a[href$='.img.xz']::before {
+    content: "\f019";
+}
+
+a[href$='/cloud']::before,
+a[href$='/desktop']::before,
+a[href$='/server']::before,
+a[href='http://dl.sabayon.org/iso/daily/daily.html']::before {
+    font-size: 3em;
+}
+
+a[href='http://dl.sabayon.org/iso/daily/daily.html']::before {
+    content: "\f0c3";
+}
+
+a[href='https://hub.docker.com/u/sabayon/dashboard/']::before {
+    background-image: url("/img/docker-logo.png");
+}
+
+a[href='https://hub.docker.com/r/sabayon']::before,
+a[href='https://atlas.hashicorp.com/Sabayon/boxes/spinbase-amd64']::before {
+    content: "\f0c2";
+}
+
+a[href='https://atlas.hashicorp.com/Sabayon/boxes/spinbase-amd64']::before {
+    background-image: url("/img/vagrantcloud-logo.png");
+}
+
+a[href='https://www.facebook.com/groups/36125411841']::before {
+    content: "\f09a";
+}
+
+a[href='https://plus.google.com/+sabayon']::before {
+    content: "\f1a0";
+}
+
+a[href$='.box']::before {
+    content: "\f019";
+}
+
+a[href$='.box.md5']::before {
+    content: "\f14a";
+}
+
+a[href$='.iso.pkglist']::before {
+    content: "\f03a";
+}
+
+a[href$='SpinBase.box']::before {
+    background-image: url("/img/vagrant-logo.png");
+    content: "";
+}
+
+a[href$='SpinBase-ovz.tar.gz']::before {
+    background-image: url("/img/virtualbox-logo.png");
+}
+
+a[href$='SpinBase-qemu.tar.gz']::before {
+    background-image: url("/img/qemu-logo.png");
+}
+
+h4 a::before {
+    content: " ";
+}
+
+h4[id^=vagrantcloud] a::before {
+    content: "";
+}
+
+article li li a {
+    font-size: 13px;
+    font-weight: normal;
+}
+
+article li li a:after,
+article li li a:focus,
+article li li a:hover {
+    text-decoration: none;
+}
+
+article li li a::before {
+    content: "\f0c1";
+}
