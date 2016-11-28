@@ -18,7 +18,16 @@ $(document).ready(function() {
         $moreLinks.closest('nav').addClass('plus');
         $moreLinks.text('more');
         $moreLinks.on('click', function() {
-            $(this).closest('nav').toggleClass('open');
+            var $nav;
+
+            $nav = $(this).closest('nav');
+            if ($nav.hasClass('open')) {
+                $nav.removeClass('open');
+                $moreLinks.text('more');
+            } else {
+                $nav.addClass('open');
+                $moreLinks.text('less');
+            }
         });
     };
     applyNavPlusPattern();

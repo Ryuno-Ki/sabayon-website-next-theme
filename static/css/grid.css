@@ -162,7 +162,7 @@ nav ul {
 }
 
 nav.plus ul {
-    height: 35px;
+    height: 43px;
     margin-top: 0;
     min-height: 0;
     overflow: hidden;
@@ -328,7 +328,7 @@ ul ul li + li {
     margin-top: 10px;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 0.5rem;
 }
 
 a[href='http://dl.sabayon.org/iso/daily/daily.html']::before,
