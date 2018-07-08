@@ -9,6 +9,25 @@
     --global-padding: 0.5em;
 }
 
+html.dark.theme {
+    --primary-foreground-colour: #9797f7;
+    --secondary-foreground-colour: #d3d3d3;
+    --primary-background-colour: #111111;
+    --secondary-background-colour: #9797f4;
+    --primary-text-colour: #d3d3d3;
+    --secondary-text-colour: #111111;
+}
+
+html.light.theme {
+    /* FIXME: Find a well looking bright colour palette */
+    --primary-foreground-colour: #9797f7;
+    --secondary-foreground-colour: #d3d3d3;
+    --primary-background-colour: #111111;
+    --secondary-background-colour: #9797f4;
+    --primary-text-colour: #d3d3d3;
+    --secondary-text-colour: #111111;
+}
+
 body {
     background-color: var(--primary-background-colour, #111);
     color: var(--primary-text-colour);
